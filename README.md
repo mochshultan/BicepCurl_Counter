@@ -27,14 +27,14 @@ Program ini menggunakan **MediaPipe** dan **Machine Learning** untuk mendeteksi 
 ## ⚙️ Instalasi
 1. **Clone Repository**
    ```bash
-   git clone https://github.com/username/barbell-detection.git
+   git clone https://github.com/mochshultan/BicepCurl_Counter.git
    cd barbell-detection
    ```
 2. **Install Dependencies**
    ```bash
-   pip install opencv-python mediapipe numpy scikit-learn
+   pip install -r requirements.txt
    ```
-3. **Jalankan Program**
+3. **Run Program**
    ```bash
    python main.py
    ```
