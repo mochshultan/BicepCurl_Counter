@@ -1,4 +1,4 @@
-# 🏋️‍♂️ Barbell Detection Program
+# 🏋️‍♂️ Bicep Curl Counter Program
 
 ## 📋 Deskripsi
 Program ini menggunakan **MediaPipe** dan **Machine Learning** untuk mendeteksi gerakan angkat beban berdasarkan sudut siku kanan dan kiri. Program menghitung jumlah pengangkatan beban secara terpisah untuk tangan kanan dan kiri, serta menampilkan total pengangkatan. Program berjalan secara real-time menggunakan webcam.
