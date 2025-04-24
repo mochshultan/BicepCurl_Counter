@@ -14,7 +14,7 @@ Program ini menggunakan **MediaPipe** dan **Machine Learning** untuk mendeteksi 
 ---
 
 ## 📦 Persyaratan Sistem
-- Python >= 3.7
+- Python 3.7 - 3.10
 - Webcam
 - Library Python:
   - `opencv-python`
@@ -30,11 +30,10 @@ Program ini menggunakan **MediaPipe** dan **Machine Learning** untuk mendeteksi 
    git clone https://github.com/mochshultan/BicepCurl_Counter.git
    cd BicepCurl_Counter
    ```
-2. **Install Kaggle Data Set**
+2. **Install Free Kaggle Data Set**
    ```
    import kagglehub
    path = kagglehub.dataset_download("trainingdatapro/pose-estimation")
-   print("Path to dataset files:", path)
    ```
    Note: Adjust path on `main.py` due to where you put your dataset
 3. **Install Dependencies**
@@ -73,16 +72,17 @@ Program ini menggunakan **MediaPipe** dan **Machine Learning** untuk mendeteksi 
 ## 📁 Struktur Program
 - `main.py` : File utama program.
 - `utils.py` : Fungsi `calculate_angle` untuk menghitung sudut siku dari koordinat landmark.
+- `body-plot` : Berisi hasil download dataset from kaggle.com or trainingdata.pro
 
 ---
 
 ## 🧪 Pengembangan & Testing
-- **Pengembangan**: Tambahkan data pelatihan untuk meningkatkan akurasi atau gunakan model lebih kompleks seperti TensorFlow.
+- **Pengembangan**: Tambahkan lebih banyak data pelatihan untuk meningkatkan akurasi atau gunakan model lebih kompleks seperti TensorFlow.
 - **Testing**: Uji dengan berbagai posisi tubuh dan sudut kamera.
 
 ---
 
-## 🚀 Fitur Pengembangan Selanjutnya
+## 🚀 Fitur Dapat Dikembangkan Selanjutnya
 - Deteksi apakah pengguna benar-benar memegang beban.
 - Hitung estimasi kalori yang terbakar.
 - Simpan data pengangkatan ke file/database.
