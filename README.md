@@ -36,7 +36,7 @@ Program ini menggunakan **MediaPipe** dan **Machine Learning** untuk mendeteksi 
    path = kagglehub.dataset_download("trainingdatapro/pose-estimation")
    print("Path to dataset files:", path)
    ```
-   Note: Adjust path on main.py due to where you put your dataset
+   Note: Adjust path on `main.py` due to where you put your dataset
 3. **Install Dependencies**
    ```bash
    pip install -r requirements.txt
@@ -65,12 +65,8 @@ Program ini menggunakan **MediaPipe** dan **Machine Learning** untuk mendeteksi 
 ---
 
 ## 📊 Logika Deteksi
-- **Sudut Siku**: Jika sudut < 90°, dianggap sebagai angkat beban.
-- **Decision Tree**: Model machine learning sederhana memprediksi gerakan (sebaiknya menggunakan lebih banyak dataset):
-  - `[160, 160]` → Tidak angkat beban
-  - `[80, 160]` → Angkat beban kanan
-  - `[160, 80]` → Angkat beban kiri
-  - `[75, 75]` → Angkat beban kedua tangan
+- **Sudut Siku**: Jika sudut < threshold, dianggap sebagai angkat beban (using 55°).
+- **Decision Tree**: Model dilatih dengan memasukkan data training berupa pasangan sudut siku (contoh: sudut siku kanan dan kiri) serta label yang merepresentasikan suatu kondisi (misalnya, aksi angkat beban atau tidak). Decision Tree mempelajari threshold atau batas nilai sudut yang memisahkan antara kondisi tersebut dengan membangun struktur pohon "if‑then". Saat proses pelatihan (dengan metode fit), algoritma mencari aturan terbaik untuk membagi data sehingga tiap cabang dari pohon menghasilkan prediksi yang tepat
 
 ---
 
