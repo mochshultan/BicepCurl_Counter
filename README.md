@@ -30,11 +30,18 @@ Program ini menggunakan **MediaPipe** dan **Machine Learning** untuk mendeteksi 
    git clone https://github.com/mochshultan/BicepCurl_Counter.git
    cd BicepCurl_Counter
    ```
-2. **Install Dependencies**
+2. **Install Kaggle Data Set**
+   ```
+   import kagglehub
+   path = kagglehub.dataset_download("trainingdatapro/pose-estimation")
+   print("Path to dataset files:", path)
+   ```
+   Note: Adjust path on main.py due to where you put your dataset
+3. **Install Dependencies**
    ```bash
    pip install -r requirements.txt
    ```
-3. **Run Program**
+4. **Run Program**
    ```bash
    python main.py
    ```
