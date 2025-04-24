@@ -28,7 +28,7 @@ Program ini menggunakan **MediaPipe** dan **Machine Learning** untuk mendeteksi 
 1. **Clone Repository**
    ```bash
    git clone https://github.com/mochshultan/BicepCurl_Counter.git
-   cd barbell-detection
+   cd BicepCurl_Counter
    ```
 2. **Install Dependencies**
    ```bash
@@ -59,7 +59,7 @@ Program ini menggunakan **MediaPipe** dan **Machine Learning** untuk mendeteksi 
 
 ## 📊 Logika Deteksi
 - **Sudut Siku**: Jika sudut < 90°, dianggap sebagai angkat beban.
-- **Decision Tree**: Model machine learning sederhana memprediksi gerakan:
+- **Decision Tree**: Model machine learning sederhana memprediksi gerakan (sebaiknya menggunakan lebih banyak dataset):
   - `[160, 160]` → Tidak angkat beban
   - `[80, 160]` → Angkat beban kanan
   - `[160, 80]` → Angkat beban kiri
